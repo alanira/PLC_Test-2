@@ -204,3 +204,25 @@ factor -> var
 var -> ID
 var -> NUMBER
 ```
+Strings:
+```
+String 1
+
+begin ID = NUMBER ; end
+
+String 2
+
+begin ant ID ; end
+
+String 3
+
+begin ant ID = NUMBER ; end
+
+String 4
+
+begin loop ( expr ) stmt ; ; end
+
+```
+
+
+
