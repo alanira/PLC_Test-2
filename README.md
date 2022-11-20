@@ -165,3 +165,42 @@ Program => begin <stmt_list> end , rule 1
 
  => begin Aaaaaa = bbbbbb * (aaaaaa – cccccc) end 
 ```
+Rules for RL parser
+
+https://jsmachines.sourceforge.net/machines/lr1.html
+
+```
+program -> begin stmt_list end
+stmt_list -> stmt ;
+stmt_list -> stmt ; stmt_list
+stmt -> either_or
+stmt -> cycle
+stmt -> declaration
+stmt -> assignment
+either_or -> either ( expr ) stmt
+either_or -> either ( expr ) stmt or stmt
+cycle -> loop ( expr ) stmt
+declaration -> ant ID
+assignment -> ID = expr
+expr -> expr == term1
+expr -> expr != term1
+expr -> expr < term1
+expr -> expr <= term1
+expr -> expr > term1
+expr -> expr >= term1
+expr -> expr >= term1
+expr -> term1
+term1 -> term1 - term2
+term1 -> term2
+term2 -> term2 + term3
+term2 -> term3
+term3 -> term3 / term4
+term3 -> term3 % term4
+term3 -> term4
+term4 -> term4 * factor
+term4 -> factor
+factor -> ( expr )
+factor -> var
+var -> ID
+var -> NUMBER
+```
