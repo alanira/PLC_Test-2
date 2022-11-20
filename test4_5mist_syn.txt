@@ -1,0 +1,24 @@
+begin
+
+ant xxxyyy;
+xxxyyy = 5$1;
+ant yyyyyy;
+yyyyyy = 1$2;
+ant zzzzzz;
+zzzzzz = 12345$4;
+ant u_ui_i_u;
+u_ui_i_u = 357484789$8;
+
+
+(xxxyyy * yyyyyy);
+
+either(xxxyyy >= 1$1) yyyyyy = xxxyyy + 3$2;;
+or u_ui_i_u = zzzzzz - 1$1;;
+
+ant alinane;
+alinane = 1$1
+
+ant accumul;
+accumul = 0$1;
+loop(alinane<5$1 accumul = alinane + 2$1;;
+

@@ -1,0 +1,72 @@
+////////////////////////////////
+test3_5mist.txt - lexical errors
+////////////////////////////////
+
+
+line 3
+ID length is not correct => token: antt
+# no such keyword as antt
+antt xxxyyy;
+
+line 10, 11
+ID length is not correct => token: pineapple
+# length of ID is greater than 8
+ant pineapple;
+pineapple = 12345$4;
+
+line 18
+Operator is not correct => token: ===
+# no relational operator as "==="
+u_ui_i_u === y_uuu_;
+
+line 22
+Symbol is not defined.
+# illegal character # after conditional statement
+either( pineapp <= 6$1) sweet_T = 15$2 / 3$2;;#
+
+line 26, 27
+Integer literal is not correct => token: 3
+# ID can't start with a number 
+ant 3alinane;
+3alinane = 1$1;
+
+line 30
+ID length is not correct => token: apple
+# ID name length is less than 6
+
+///////////////////////////////
+test4_5mist.txt - syntax errors
+///////////////////////////////
+
+line 25
+SyntaxError: None => Unexpected end of file!
+# no end keyword
+
+
+line 19
+SyntaxError: Token(value="end",TokenType="TokenType.KEYWORD") => Terminal symbol is missing!
+# no ; in declaration statement
+# alinane = 1$1
+
+
+line 23
+SyntaxError: Token(value="accumul",TokenType="TokenType.ID") => ) is not in place!
+# ) is missing in expression
+loop(alinane<5$1
+
+
+line 16
+SyntaxError: Token(value="or",TokenType="TokenType.KEYWORD") => Keyword or ID is missing!
+# can't start conditional statement with or only
+or u_ui_i_u = zzzzzz - 1$1;;
+
+
+line 13
+SyntaxError: Token(value="(",TokenType="TokenType.SPECIAL_SYMBOL") => Keyword or ID is missing!
+# no keyword or ID
+(xxxyyy * yyyyyy);
+
+
+
+
+

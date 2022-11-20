@@ -1,0 +1,34 @@
+begin
+
+ant AaaaaAaa;
+ant Bbb_b_bBB;
+
+AaaaaAaa = 78$4;
+Bbb_b_bBB = 25$4;
+
+loop(AaaaaAaa <= 100$8) Bbb_b_bBB = AaaaaAaa + 2$4;;
+
+
+ant cac_us;
+cac_us = 5$1;
+
+ant Flowe_;
+Flowe_ = 1$2;
+
+ant InBloom;
+InBloom = 12345$4;
+InBloom = 12345$4 - 1000$4;
+
+ant M_Th_e_u;
+M_Th_e_u = 98765432157$8;
+M_Th_e_u = 98765432157$8 % 100$2;
+
+InBloom = M_Th_e_u - 1$1;
+
+ant multiple;
+multiple = 2$1 * 2$1;
+
+either(Flowe_ <= 1$1) Flowe_ = Flowe_ + 10$2;;
+
+
+end
