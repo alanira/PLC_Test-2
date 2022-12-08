@@ -9,6 +9,18 @@ zzzzzz = 12345$4;
 ant u_ui_i_u;
 u_ui_i_u = 357484789$8;
 
+bee ffffff;
+ffffff = true;
+
+caterpillar sashka;
+sashka = "sashka";
+
+fly number;
+number = 0.15;
+
+
+
+
 ant maaaam;
 maaaam = 2$1*2$1;
 either(xxxyyy >= 1$1) yyyyyy = xxxyyy + 3$2;  or u_ui_i_u = zzzzzz - 1$1;;

@@ -26,6 +26,11 @@ mult_token = Token("*", TokenType.OPERATOR)
 mod_token = Token("%", TokenType.OPERATOR)
 plus_token = Token("+", TokenType.OPERATOR)
 minus_token = Token("-", TokenType.OPERATOR)
+tr_token = Token("true", TokenType.BOOL)
+fl_token = Token("false", TokenType.BOOL)
+float_token = Token("fly", TokenType.KEYWORD)
+bool_token = Token("bee", TokenType.KEYWORD)
+str_token = Token("caterpillar",TokenType.KEYWORD)
 
 
 def compare_tokens(token1, token2):
@@ -52,8 +57,11 @@ def switchNextToken():
 
 def check_var():
     print("Enter <var>")
-    if not (next_token.token_type == TokenType.ID or next_token.token_type == TokenType.NUMBER):
-        error("ID or Number token type is not matched!")
+    is_valid = next_token.token_type == TokenType.ID or next_token.token_type == TokenType.NUMBER \
+        or next_token.token_type == TokenType.BOOL or next_token.token_type == TokenType.FLOAT \
+            or next_token.token_type == TokenType.STRING
+    if not is_valid:
+        error("ID, Number, Bool, String or Float token type is not matched!")
     switchNextToken()
     print("Exit <var>")
 
@@ -119,8 +127,11 @@ def check_assignment():
 
 def check_declaration():
     print("Enter <declaration>")
-    if not compare_tokens(next_token, ant_token):
-        error("Keyword ant is not in place!")
+    is_declaration = compare_tokens(next_token, ant_token) \
+        or compare_tokens(next_token, bool_token) or compare_tokens(next_token, float_token) \
+        or compare_tokens(next_token, str_token)
+    if not is_declaration:
+        error("Data type of Keyword is not in place!")
     switchNextToken()
     if next_token.token_type != TokenType.ID:
         error("ID is missing!")
@@ -167,6 +178,12 @@ def check_conditional_st():
 def check_stmt():
     print("Enter <stmt>")
     if compare_tokens(next_token, ant_token):
+        check_declaration()
+    elif compare_tokens(next_token, bool_token):
+        check_declaration()
+    elif compare_tokens(next_token, float_token):
+        check_declaration()
+    elif compare_tokens(next_token, str_token):
         check_declaration()
     elif compare_tokens(next_token, loop_token):
         check_loop()
